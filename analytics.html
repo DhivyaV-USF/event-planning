@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore sample event planning insights from Gather & Co. Events in Dallas, Texas.">
+  <title>Analytics | Gather &amp; Co. Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Gather & Co. Events home">
+      <span class="brand-mark" aria-hidden="true">G<span>&amp;</span>C</span>
+      <span class="brand-name">Gather <span>&amp; Co.</span><small>EVENTS · DALLAS, TX</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="manageevents.html">Manage Events</a>
+      <a class="active" href="analytics.html" aria-current="page">Analytics</a>
+      <a href="aboutus.html">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="manage-intro analytics-intro">
+      <div class="section-wrap">
+        <p class="eyebrow"><span></span> A CLEARER PICTURE</p>
+        <h1>Good plans, <em>by the numbers.</em></h1>
+        <p>A little perspective on the gatherings we bring to life.</p>
+      </div>
+    </section>
+
+    <section class="analytics-content section-wrap" aria-label="Event planning analytics">
+      <div class="analytics-heading">
+        <div>
+          <p class="eyebrow"><span></span> THE BIG PICTURE</p>
+          <h2>Gathering momentum.</h2>
+        </div>
+        <p class="analytics-period">SAMPLE OVERVIEW <span>·</span> NOV 2025 — OCT 2026</p>
+      </div>
+
+      <div class="summary-grid" aria-label="Event summary">
+        <article class="summary-card">
+          <span class="summary-label">TOTAL EVENTS</span>
+          <strong id="total-events" class="summary-value">—</strong>
+          <span class="summary-foot">gatherings planned</span>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">TOTAL REVENUE</span>
+          <strong id="total-revenue" class="summary-value">—</strong>
+          <span class="summary-foot">across all event types</span>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">AVERAGE GUEST COUNT</span>
+          <strong id="average-guests" class="summary-value">—</strong>
+          <span class="summary-foot">guests per event</span>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">MOST POPULAR TYPE</span>
+          <strong id="popular-type" class="summary-value summary-type">—</strong>
+          <span id="popular-type-count" class="summary-foot">by number of events</span>
+        </article>
+      </div>
+
+      <div class="chart-grid">
+        <article class="chart-card chart-card-wide">
+          <div class="chart-heading">
+            <span class="chart-index">01</span>
+            <div><h3>Events by type</h3><p>A dozen months of good company</p></div>
+          </div>
+          <div class="chart-canvas chart-canvas-bar">
+            <canvas id="events-by-type" role="img" aria-label="Bar chart showing number of events by type"></canvas>
+          </div>
+        </article>
+        <article class="chart-card chart-card-wide">
+          <div class="chart-heading">
+            <span class="chart-index">02</span>
+            <div><h3>Monthly revenue</h3><p>Month by month, Nov 2025 to Oct 2026</p></div>
+          </div>
+          <div class="chart-canvas chart-canvas-line">
+            <canvas id="monthly-revenue" role="img" aria-label="Line chart showing monthly revenue for the last twelve months"></canvas>
+          </div>
+        </article>
+        <article class="chart-card chart-card-doughnut">
+          <div class="chart-heading">
+            <span class="chart-index">03</span>
+            <div><h3>Revenue by type</h3><p>Each gathering brings something different</p></div>
+          </div>
+          <div class="chart-canvas chart-canvas-doughnut">
+            <canvas id="revenue-by-type" role="img" aria-label="Doughnut chart showing revenue share by event type"></canvas>
+          </div>
+        </article>
+      </div>
+      <p class="analytics-note"><span aria-hidden="true">✳</span> All figures are sample data for demonstration purposes.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">G<span>&amp;</span>C</span>
+      <span class="brand-name">Gather <span>&amp; Co.</span><small>EVENTS · DALLAS, TX</small></span>
+    </a>
+    <p>Good people. Great gatherings. Always.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="manageevents.html">Manage Events</a>
+      <a href="analytics.html" aria-current="page">Analytics</a>
+      <a href="aboutus.html">About Us</a>
+    </div>
+    <small class="copyright">© 2026 GATHER &amp; CO. EVENTS</small>
+  </footer>
+</body>
+</html>

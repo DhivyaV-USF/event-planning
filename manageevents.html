@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manage Gather & Co. Events' wedding, corporate, and social event schedule.">
+  <title>Manage Events | Gather &amp; Co. Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/manageevents.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Gather & Co. Events home">
+      <span class="brand-mark" aria-hidden="true">G<span>&amp;</span>C</span>
+      <span class="brand-name">Gather <span>&amp; Co.</span><small>EVENTS · DALLAS, TX</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="manageevents.html" aria-current="page">Manage Events</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="aboutus.html">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="manage-intro">
+      <div class="section-wrap">
+        <p class="eyebrow"><span></span> THE GATHERING PLACE</p>
+        <h1>Make room for <em>what matters.</em></h1>
+        <p>Keep every thoughtful detail—and every good gathering—right on schedule.</p>
+      </div>
+    </section>
+
+    <section class="manage-content section-wrap" aria-label="Event management">
+      <div class="manage-toolbar">
+        <div>
+          <p class="eyebrow"><span></span> YOUR EVENT LINEUP</p>
+          <h2>All the good things.</h2>
+        </div>
+        <div class="event-filters">
+          <label class="search-field">
+            <span class="visually-hidden">Search events</span>
+            <input id="event-search" type="search" placeholder="Search events…" autocomplete="off">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+          </label>
+          <label>
+            <span class="visually-hidden">Filter by event type</span>
+            <select id="event-filter">
+              <option value="all">All event types</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Corporate">Corporate</option>
+              <option value="Birthday/Social">Birthday/Social</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <p id="event-message" class="event-message" role="status" aria-live="polite" hidden></p>
+      <p id="results-count" class="results-count"></p>
+      <div class="event-table-wrap">
+        <table class="event-table">
+          <caption class="visually-hidden">Gather &amp; Co. event schedule</caption>
+          <thead>
+            <tr>
+              <th scope="col">Event</th>
+              <th scope="col">Type</th>
+              <th scope="col">Date</th>
+              <th scope="col">Venue</th>
+              <th scope="col">Guests</th>
+              <th scope="col">Budget</th>
+              <th scope="col">Status</th>
+              <th scope="col"><span class="visually-hidden">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody id="event-table-body"></tbody>
+        </table>
+      </div>
+      <p class="demo-note">Demo event data is stored in this page only and resets when you reload.</p>
+
+      <section class="event-form-card" aria-labelledby="event-form-title">
+        <div class="form-heading">
+          <p class="eyebrow"><span></span> YOUR NEXT GOOD IDEA</p>
+          <h2 id="event-form-title">Add an event.</h2>
+          <p>Start with the basics. You can always fine-tune the details.</p>
+        </div>
+        <form id="event-form">
+          <div class="form-grid">
+            <label class="form-field form-field-wide">
+              <span>Event name</span>
+              <input id="event-name" name="name" type="text" maxlength="80" placeholder="e.g. A celebration under the stars" required>
+            </label>
+            <label class="form-field">
+              <span>Event type</span>
+              <select id="event-type" name="type" required>
+                <option value="" disabled selected>Choose a type</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Corporate">Corporate</option>
+                <option value="Birthday/Social">Birthday/Social</option>
+              </select>
+            </label>
+            <label class="form-field">
+              <span>Date</span>
+              <input id="event-date" name="date" type="date" required>
+            </label>
+            <label class="form-field form-field-wide">
+              <span>Venue</span>
+              <input id="event-venue" name="venue" type="text" maxlength="100" placeholder="Venue name, Dallas" required>
+            </label>
+            <label class="form-field">
+              <span>Guest count</span>
+              <input id="event-guests" name="guests" type="number" min="1" max="100000" step="1" placeholder="120" required>
+            </label>
+            <label class="form-field">
+              <span>Budget (USD)</span>
+              <input id="event-budget" name="budget" type="number" min="0" max="100000000" step="0.01" placeholder="12000" required>
+            </label>
+            <label class="form-field">
+              <span>Status</span>
+              <select id="event-status" name="status" required>
+                <option value="Planning">Planning</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="button button-dark" id="save-event" type="submit">Add event <span aria-hidden="true">↗</span></button>
+            <button class="form-cancel" id="cancel-edit" type="button" hidden>Cancel edit</button>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">G<span>&amp;</span>C</span>
+      <span class="brand-name">Gather <span>&amp; Co.</span><small>EVENTS · DALLAS, TX</small></span>
+    </a>
+    <p>Good people. Great gatherings. Always.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="manageevents.html" aria-current="page">Manage Events</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="aboutus.html">About Us</a>
+    </div>
+    <small class="copyright">© 2026 GATHER &amp; CO. EVENTS</small>
+  </footer>
+</body>
+</html>

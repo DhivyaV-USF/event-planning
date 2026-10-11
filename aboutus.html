@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About Dhivya Venkatachalam and how she built the Gather & Co. Events website.">
+  <title>About Us | Gather &amp; Co. Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Gather & Co. Events home">
+      <span class="brand-mark" aria-hidden="true">G<span>&amp;</span>C</span>
+      <span class="brand-name">Gather <span>&amp; Co.</span><small>EVENTS · DALLAS, TX</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="manageevents.html">Manage Events</a>
+      <a href="analytics.html">Analytics</a>
+      <a class="active" href="aboutus.html" aria-current="page">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-intro">
+      <div class="section-wrap">
+        <p class="eyebrow"><span></span> A LITTLE ABOUT ME</p>
+        <h1>Curious by nature.<br><em>Thoughtful by design.</em></h1>
+      </div>
+    </section>
+
+    <section class="about-profile section-wrap" aria-labelledby="profile-name">
+      <div class="profile-heading">
+        <img class="profile-photo" src="img/dhivya.jpg" alt="Dhivya Venkatachalam" width="160" height="160">
+        <div class="profile-intro">
+          <p class="eyebrow"><span></span> THE PERSON BEHIND THE PROJECT</p>
+          <h2 id="profile-name">Dhivya <em>Venkatachalam</em></h2>
+          <p class="profile-summary">I am pursuing an MS in Artificial Intelligence and Business Analytics at the University of South Florida, building on an engineering education and professional experience as an Associate Developer and Data Engineer Intern.</p>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <section class="about-detail" aria-labelledby="education-title">
+          <div class="about-detail-heading">
+            <span class="about-number">01</span>
+            <h3 id="education-title">Education</h3>
+          </div>
+          <article class="bio-item">
+            <p class="bio-meta">GRADUATING FALL 2026</p>
+            <h4>MS in Artificial Intelligence and Business Analytics</h4>
+            <p>Muma College of Business, University of South Florida</p>
+          </article>
+          <article class="bio-item">
+            <p class="bio-meta">UNDERGRADUATE EDUCATION</p>
+            <h4>Bachelor’s in Electronics and Communication Engineering</h4>
+            <p>Anna University, India</p>
+          </article>
+        </section>
+
+        <section class="about-detail" aria-labelledby="experience-title">
+          <div class="about-detail-heading">
+            <span class="about-number">02</span>
+            <h3 id="experience-title">Experience</h3>
+          </div>
+          <article class="bio-item">
+            <p class="bio-meta">2021 — 2025</p>
+            <h4>Associate Developer</h4>
+            <p>Cognizant · Worked with JavaScript, XML, JSON, Java, and SQL.</p>
+          </article>
+          <article class="bio-item">
+            <p class="bio-meta">SUMMER 2026 · DALLAS, TX</p>
+            <h4>Data Engineer Intern</h4>
+            <p>Conifer Health Solutions · Worked on a SQL Server/SSIS to Google BigQuery migration.</p>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <section class="website-story">
+      <div class="section-wrap story-inner">
+        <div class="story-heading">
+          <p class="eyebrow"><span></span> BEHIND THE BUILD</p>
+          <h2>How I built<br><em>this website.</em></h2>
+        </div>
+        <div class="story-copy">
+          <p>I built the site in Visual Studio Code using the folder structure from the class starter repository: the HTML pages at the top level, with separate folders for CSS, JavaScript, and images. I used AI prompts to generate one page at a time, starting with the home page and shared stylesheet so every page would use the same menu and look.</p>
+          <p>The Manage Events page mocks create, read, update, and delete operations with JavaScript. Events are kept in a JavaScript array, so you can add, search, filter, edit, and delete them, and the data resets when the page reloads. The Analytics page uses Chart.js to show sample event data by type, by month, and by revenue share.</p>
+          <p>After the first version, I reviewed and tested every page and made fixes: I resized my profile photo from over 5 MB to about 30 KB so the page loads quickly, made the text larger and easier to read, and changed the events table to show as cards on phones so the Edit and Delete buttons are always visible.</p>
+          <p>I also looked at how real event planner websites are designed. Most lead with photography, organize their work by event type, and build trust with client testimonials, so I added free stock photos to the home page, a gallery of event details, and a sample testimonials section. Each photo is cropped and compressed to under 115 KB, and the gallery photos load only when you scroll to them.</p>
+          <p>The biggest lesson for me was that generating code is only the first step. Testing on different screen sizes, checking file names (GitHub Pages is case-sensitive), and keeping files small made the difference between a page that looks good on my laptop and one that works well for everyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-tools section-wrap">
+      <div class="tools-heading">
+        <p class="eyebrow"><span></span> WHAT'S IN THE TOOLKIT</p>
+        <h2>Technologies <em>used.</em></h2>
+      </div>
+      <ul class="technology-list" aria-label="Technologies used">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Chart.js</li>
+        <li>Visual Studio Code</li>
+        <li>GitHub</li>
+        <li>GitHub Pages</li>
+      </ul>
+      <div class="about-links">
+        <a href="https://github.com/DhivyaV-USF" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/DhivyaV-USF/event-planning" target="_blank" rel="noopener noreferrer">Code repository <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">G<span>&amp;</span>C</span>
+      <span class="brand-name">Gather <span>&amp; Co.</span><small>EVENTS · DALLAS, TX</small></span>
+    </a>
+    <p>Good people. Great gatherings. Always.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="manageevents.html">Manage Events</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="aboutus.html" aria-current="page">About Us</a>
+    </div>
+    <small class="copyright">© 2026 GATHER &amp; CO. EVENTS</small>
+  </footer>
+</body>
+</html>
